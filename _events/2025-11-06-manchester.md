@@ -1,18 +1,17 @@
 ---
 author:
 - Miklós Koren (CEU, HUN-REN KRTK, CEPR and CESifo)
-speaker: Miklós Koren
-title: CEPR Macroeconomics and Growth Annual Symposium 2025
+- Zsófia Bárány (CEU)
+speaker: Zsófia Bárány
+title: Broken Ladders: AI, Teamwork, and the Dynamics of Skill Formation in the Workplace
 date: 2025-11-06
 description: CEPR Macroeconomics and Growth Annual Symposium 2025
-image: https://raw.githubusercontent.com/ceumicrodata/WMS-descriptives/refs/heads/main/output/fig/tozsde.jpg
+image: /assets/images/stock/igor-omilaev-eGGFZ5X2LnA-unsplash.jpg
 categories: 
 - macroeconomics
 - conference
 event_date: 2025-11-06
-project: Macromanagers
+project: macromanagers
 location: Manchester, UK
 links:
-- text: Slides
-  url: https://cepr.org/events/cepr-macroeconomics-and-growth-annual-symposium-2025
 ---
