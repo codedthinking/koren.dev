@@ -1,10 +1,9 @@
 ---
-author:
+author: 
 - Miklós Koren (CEU, HUN-REN KRTK, CEPR and CESifo)
 - Zsófia Bárány (CEU)
 speaker: Zsófia Bárány
-title: Broken Ladders: AI, Teamwork, and the Dynamics of Skill Formation in the Workplace
-date: 2025-09-22
+title: Broken Ladders AI, Teamwork, and the Dynamics of Skill Formation in the Workplace
 description: CEPR Macroeconomics and Growth Annual Symposium 2025
 image: /assets/images/stock/igor-omilaev-eGGFZ5X2LnA-unsplash.jpg
 categories: 
