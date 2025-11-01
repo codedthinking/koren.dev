@@ -8,7 +8,9 @@ statement: ""
 team:
   - "koren"
   - "orban"
+  - "szilagyi"
   - "telegdy"
+  - "vereckei"
 grants:
 - erc-advanced-2022
 - elvonal
