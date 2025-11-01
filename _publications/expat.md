@@ -1,8 +1,10 @@
 ---
 cite: |-
-  Koren, Miklós and Álmos Telegdy. 2024. "Expatriate Managers: Effects on Firm Performance"
+  Koren, Miklós and Álmos Telegdy. 2025. "Expatriate CEOs and Firm Performance: The Role of General Skills, Investment and Exporting Ability"
 links:
-  - text: CESifo Working Paper
+  - text: "Full text"
+    url: "https://cdn.thnk.ng/pdf/expat/paper.pdf"
+  - text: "Working paper"
     url: "https://www.cesifo.org/DocDL/cesifo1_wp11164.pdf"
 statement: ""
 team:
@@ -11,13 +13,13 @@ team:
 grants:
 - erc-advanced-2022
 - elvonal
-title: "Expatriate Managers: Effects on Firm Performance"
-date: "2024-06-07"
+title: "Expatriate CEOs and Firm Performance: The Role of General Skills, Investment and Exporting Ability"
+date: "2025-10-01"
 tags:
   - working
   - macromanagers
-description: "Using a novel Hungarian dataset on firms and their Chief Executive Officers (CEOs), we estimate the impact of hiring expatriate CEOs. By examining foreign acquisitions where the new owner replaces the incumbent CEO with an expatriate or a local CEO, we address the selection into both acquisition and CEO hiring. Firms led by expatriate CEOs show 13 percent total factor productivity growth, 95 percent sales growth, and increase both exports and domestic sales. Hiring expatriate CEOs enhances firm performance in both international and domestic markets. Our findings suggest that expatriates have superior general management skills."
+description: "We estimate the effect of expatriate CEOs on firm performance using Hungarian administrative data. Comparing firms with expatriate and local CEOs following a foreign acquisition, we find that expatriates increase TFP by 8.5% and sales by 118%. Interpreting these effects through the lens of an industry equilibrium model reveals that 87% of revenue gains stem from TFP improvements, with capital deepening and export market access contributing 10% and 3%. The decomposition is similar across sectors, except export gains are absent in nontradable sectors. Our results suggest that expatriates create value primarily through superior general management skills."
 ---
 
-Using a novel Hungarian dataset on firms and their Chief Executive Officers (CEOs), we estimate the impact of hiring expatriate CEOs. By examining foreign acquisitions where the new owner replaces the incumbent CEO with an expatriate or a local CEO, we address the selection into both acquisition and CEO hiring. Firms led by expatriate CEOs show 13 percent total factor productivity growth, 95 percent sales growth, and increase both exports and domestic sales. Hiring expatriate CEOs enhances firm performance in both international and domestic markets. Our findings suggest that expatriates have superior general management skills.
+We estimate the effect of expatriate CEOs on firm performance using Hungarian administrative data. Comparing firms with expatriate and local CEOs following a foreign acquisition, we find that expatriates increase TFP by 8.5% and sales by 118%. Interpreting these effects through the lens of an industry equilibrium model reveals that 87% of revenue gains stem from TFP improvements, with capital deepening and export market access contributing 10% and 3%. The decomposition is similar across sectors, except export gains are absent in nontradable sectors. Our results suggest that expatriates create value primarily through superior general management skills.
 

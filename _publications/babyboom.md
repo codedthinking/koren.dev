@@ -1,9 +1,10 @@
 ---
 cite: |-
-  Miklós Koren and Krisztina Orbán. 2023. "The Macroeconomics of Managers: Supply, Selection, and Competition
-  "
+  Koren, Miklós and Krisztina Orbán. 2025. "Managers, Entrepreneurs, and the Allocation of Talent: Evidence from Hungary's Transition"
 links:
   - text: "Full text"
+    url: "https://zenodo.org/records/17238595"
+  - text: "Working paper"
     url: "https://kti.krtk.hu/wp-content/uploads/2023/09/KRTKKTIWP202329.pdf"
 statement: ""
 team:
@@ -12,14 +13,14 @@ team:
 grants:
 - erc-advanced-2022
 - elvonal
-title: "The Macroeconomics of Managers: Supply, Selection, and Competition"
-date: 2023-09-29
+title: "Managers, Entrepreneurs, and the Allocation of Talent: Evidence from Hungary's Transition"
+date: 2025-09-30
 tags:
   - working
   - macromanagers
-description: "Good management practices are important determinants of firm success. It is unclear, however, to what extent pro-management policies can shape aggregate outcomes. We use data on corporations and their top managers in Hungary during and after its post-communist transition to document a number of salient patterns. First, the number of managers is low under communism when most employment is in large conglomerates. After the transition to capitalism, the number of managers increased sharply. Second, economics and business degrees became more popular with capitalist transition. Third, newly entering managers tended to run smaller firms than incumbent managers. We build a dynamic equilibrium model to explain these facts. In the model, the number and average quality of managers react to schooling and career choice. We use the model to evaluate hypothetical policies aiming to improve aggregate productivity through management education and corporate liberalization. Our results suggest that variations in the supply of good managers are important to understand the success of management interventions.\n"
+description: "Management quality drives firm performance and aggregate productivity, yet the supply of managerial talent remains poorly understood. A key friction is that hired managers cannot fully appropriate the surplus they generate, unlike entrepreneurs who own their firms, creating a wedge between private and social returns to management. Here we develop a general equilibrium model to quantify how this corporate governance friction distorts talent allocation between entrepreneurship, management, and employment. Using the universe of Hungarian firms and CEOs (1986--2022), we exploit the transition to capitalism—when the count of enterprises increased from 21,000 to 115,000 in three years—to identify the parameters of the model. We find that managers capture only 60% of the surplus they create, resulting in too few professional managers and too many less-productive entrepreneurs. Eliminating this friction would raise GDP per worker by 4% through improved occupational composition. Uniform subsidies fail to correct the misallocation, raising GDP by only 0.1%. Our results show that management interventions' aggregate effects depend critically on targeting the specific friction between hired managers and entrepreneurs rather than expanding the overall pool of business leaders."
 
 ---
 
-Good management practices are important determinants of firm success. It is unclear, however, to what extent pro-management policies can shape aggregate outcomes. We use data on corporations and their top managers in Hungary during and after its post-communist transition to document a number of salient patterns. First, the number of managers is low under communism when most employment is in large conglomerates. After the transition to capitalism, the number of managers increased sharply. Second, economics and business degrees became more popular with capitalist transition. Third, newly entering managers tended to run smaller firms than incumbent managers. We build a dynamic equilibrium model to explain these facts. In the model, the number and average quality of managers react to schooling and career choice. We use the model to evaluate hypothetical policies aiming to improve aggregate productivity through management education and corporate liberalization. Our results suggest that variations in the supply of good managers are important to understand the success of management interventions.
+Management quality drives firm performance and aggregate productivity, yet the supply of managerial talent remains poorly understood. A key friction is that hired managers cannot fully appropriate the surplus they generate, unlike entrepreneurs who own their firms, creating a wedge between private and social returns to management. Here we develop a general equilibrium model to quantify how this corporate governance friction distorts talent allocation between entrepreneurship, management, and employment. Using the universe of Hungarian firms and CEOs (1986--2022), we exploit the transition to capitalism—when the count of enterprises increased from 21,000 to 115,000 in three years—to identify the parameters of the model. We find that managers capture only 60% of the surplus they create, resulting in too few professional managers and too many less-productive entrepreneurs. Eliminating this friction would raise GDP per worker by 4% through improved occupational composition. Uniform subsidies fail to correct the misallocation, raising GDP by only 0.1%. Our results show that management interventions' aggregate effects depend critically on targeting the specific friction between hired managers and entrepreneurs rather than expanding the overall pool of business leaders.
 
