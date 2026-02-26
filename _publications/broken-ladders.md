@@ -1,6 +1,6 @@
 ---
 cite: |-
-  Bárány, Zsófia L., and Miklós Koren. 2025. "Broken Ladders: AI, Teamwork, and the Dynamics of Skill Formation in the Workplace." Working Paper.
+  Bárány, Zsófia L., and Miklós Koren. 2026. "Broken Ladders: AI, Teamwork, and the Dynamics of Skill Formation in the Workplace." Working Paper.
 links:
   - text: "PDF"
     url: "https://cdn.thnk.ng/pdf/broken-ladders/paper.pdf"
