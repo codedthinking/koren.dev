@@ -12,7 +12,7 @@ grants:
   - erc-advanced-2022
   - elvonal
 title: "Broken Ladders: AI, Teamwork, and the Dynamics of Skill Formation in the Workplace"
-date: "2025-05-01"
+date: "2026-02-25"
 tags:
   - working
   - macromanagers
