@@ -15,4 +15,6 @@ links:
   url: https://bse.eu/summer-forum
 - text: Call for Papers
   url: https://www.dropbox.com/scl/fi/gxwbm2dm5hmvdz3zvg27w/sf2026-call-for-papers-growth-and-productivity.pdf?rlkey=yttn5g7uytcxgcv2utikn72fg&e=2&dl=0
+tags:
+- macromanagers
 ---

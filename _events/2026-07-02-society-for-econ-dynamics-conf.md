@@ -15,4 +15,6 @@ links:
   url: https://theeconomicmisfit.com/2025/12/25/2026-sed-meeting-society-for-economic-dynamics-conference/
 - text: SED website
   url: https://economicdynamics.org/
+tags:
+- macromanagers
 ---

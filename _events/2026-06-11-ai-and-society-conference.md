@@ -10,4 +10,6 @@ categories:
     - conference
 event_date: 2026-06-11
 location: "Milan, Italy"
+tags:
+- macromanagers
 ---

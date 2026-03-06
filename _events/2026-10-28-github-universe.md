@@ -13,4 +13,6 @@ location: "San Francisco, USA"
 links:
 - text: Conference website
   url: https://githubuniverse.com/
+tags:
+- macromanagers
 ---

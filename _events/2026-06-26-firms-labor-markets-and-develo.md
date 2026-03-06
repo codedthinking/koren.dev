@@ -15,4 +15,6 @@ location: "Naples, Italy"
 links:
 - text: Event page
   url: https://cepr.org/events/firms-labour-markets-and-development-workshop-filmad
+tags:
+- macromanagers
 ---

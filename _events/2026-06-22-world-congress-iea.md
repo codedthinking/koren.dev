@@ -13,4 +13,6 @@ location: "Belgrade, Serbia"
 links:
 - text: Submission page
   url: https://ieawc2026.org/submission/
+tags:
+- macromanagers
 ---

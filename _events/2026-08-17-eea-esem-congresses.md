@@ -13,4 +13,6 @@ location: "Dublin, Ireland"
 links:
 - text: Conference website
   url: https://www.eea-esem-congresses.org/
+tags:
+- macromanagers
 ---

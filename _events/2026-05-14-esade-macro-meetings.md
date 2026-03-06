@@ -13,4 +13,6 @@ location: "Barcelona, Spain"
 links:
 - text: Program
   url: https://itemsweb.esade.edu/wi/research/gref/Esade_Macro_Meetings_2026.pdf
+tags:
+- macromanagers
 ---

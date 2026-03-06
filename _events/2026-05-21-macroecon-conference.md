@@ -13,4 +13,6 @@ location: "Tilburg, Netherlands"
 links:
 - text: Call for Papers
   url: https://macro-economics-tilburg.weebly.com/call-for-papers-2026.html
+tags:
+- macromanagers
 ---
