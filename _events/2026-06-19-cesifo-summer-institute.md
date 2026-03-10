@@ -1,4 +1,5 @@
 ---
+published: false
 title: "CESifo Venice Summer Institute 2026"
 speaker: Miklós Koren
 date: 2026-06-19

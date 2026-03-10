@@ -1,4 +1,5 @@
 ---
+published: false
 title: "Annual Meeting of the Society for Economic Dynamics 2026"
 speaker: Miklós Koren
 date: 2026-07-02

@@ -1,4 +1,5 @@
 ---
+published: false
 title: "Firms, Labour Markets and Development Workshop (FILMAD)"
 speaker: Miklós Koren
 date: 2026-06-26

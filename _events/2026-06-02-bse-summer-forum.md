@@ -1,4 +1,5 @@
 ---
+published: false
 title: "BSE Summer Forum 2026"
 speaker: Miklós Koren
 date: 2026-06-02

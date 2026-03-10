@@ -1,4 +1,5 @@
 ---
+published: false
 title: "GitHub Universe 2026"
 speaker: Miklós Koren
 date: 2026-10-28

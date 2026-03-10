@@ -1,4 +1,5 @@
 ---
+published: false
 title: "CESifo Area Conference: Macro with Micro Data 2026"
 speaker: Miklós Koren
 date: 2026-06-12
