@@ -4,6 +4,7 @@ speaker: Miklós Koren
 date: 2026-06-11
 aspectratio: 169
 code: missing
+image: /assets/images/macromanagers-logo2.svg
 description: "Conference on the economic and social impacts of AI, June 11-12, 2026 at Bocconi University, Milan."
 project: ai-learning
 categories:

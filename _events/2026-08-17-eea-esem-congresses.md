@@ -4,6 +4,7 @@ speaker: Miklós Koren
 date: 2026-08-17
 aspectratio: 169
 code: missing
+image: /assets/images/macromanagers-logo2.svg
 description: "41st meeting of the European Economic Association and the 77th European meeting of the Econometric Society. Hosted by University College Dublin, August 17-21, 2026."
 project: ai-learning
 categories:

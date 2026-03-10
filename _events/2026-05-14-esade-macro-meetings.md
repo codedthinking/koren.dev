@@ -4,6 +4,7 @@ speaker: Miklós Koren
 date: 2026-05-14
 aspectratio: 169
 code: missing
+image: /assets/images/macromanagers-logo2.svg
 project: ai-learning
 categories:
     - conference

@@ -4,6 +4,7 @@ speaker: Miklós Koren
 date: 2026-07-29
 aspectratio: 169
 code: missing
+image: /assets/images/macromanagers-logo2.svg
 description: Keynote talk at the Romanian Economics Society annual conference.
 categories:
     - conference
