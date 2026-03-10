@@ -4,7 +4,7 @@ speaker: Miklós Koren
 date: 2026-06-26
 aspectratio: 169
 code: missing
-image: /assets/images/macromanagers-logo2.svg
+image: https://koren.dev/assets/images/macromanagers-logo2.svg
 description: "6th edition CEPR workshop promoting exchange of new research in development and international economics. Keynote: Jonas Hjort (UCL). University of Naples Parthenope, June 26-27, 2026."
 project: ai-learning
 categories:

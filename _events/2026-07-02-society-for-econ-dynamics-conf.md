@@ -4,7 +4,7 @@ speaker: Miklós Koren
 date: 2026-07-02
 aspectratio: 169
 code: missing
-image: /assets/images/macromanagers-logo2.svg
+image: https://koren.dev/assets/images/macromanagers-logo2.svg
 description: "Annual meeting of the Society for Economic Dynamics (SED), bringing together leading researchers in macroeconomics, economic growth, and dynamic economic analysis. Hosted by Athens University of Economics and Business, July 2-4, 2026."
 categories:
     - conference

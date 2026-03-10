@@ -4,7 +4,7 @@ speaker: Miklós Koren
 date: 2026-06-04
 aspectratio: 169
 code: missing
-image: /assets/images/macromanagers-logo2.svg
+image: https://koren.dev/assets/images/macromanagers-logo2.svg
 description: "Inaugural workshop of the CEPR Research Policy Network on Growth, Innovation and Social Model in Europe. June 4, 2026, Paris."
 categories:
     - conference
