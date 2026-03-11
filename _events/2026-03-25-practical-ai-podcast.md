@@ -1,15 +1,15 @@
 ---
 title: "Vibe Coding Kills Open Source"
 speaker: Miklós Koren
-date: 2026-02-24
+date: 2026-03-25
 aspectratio: 169
 code: missing
 image: https://koren.dev/assets/images/macromanagers-logo2.svg
-description: "Presenting our work Vibe Coding Kills Open Source at Ericsson."
-event_date: 2026-02-24
-location: "Budapest, Hungary"
+description: "Recording of the Practical AI podcast episode \"Vibe Coding Kills Open Source\". (Air date to be updated.)"
+event_date: 2026-03-25
+location: "Online"
 categories:
-    - talk
+    - podcast
 tags:
 - macromanagers
 ---
