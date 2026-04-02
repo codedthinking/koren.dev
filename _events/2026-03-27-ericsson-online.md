@@ -12,4 +12,7 @@ categories:
     - talk
 tags:
 - macromanagers
+links:
+- text: Slides
+  url: "https://cdn.thnk.ng/pdf/vibe-coding-industry.pdf"
 ---
