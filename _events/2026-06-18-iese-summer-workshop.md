@@ -7,7 +7,7 @@ author:
   - "Miklós Koren (CEU)"
 description: "Presenting 'The Directions of Technical Change' (with Zsófia Bárány) at the IESE Economics Summer Workshop."
 location: "Barcelona, Spain"
-image: https://koren.dev/assets/images/stock/electronic-wires-zFYUsLk_50Y-unsplash.jpg
+image: https://koren.dev/assets/images/stock/Past_jovokutatas.jpg
 categories:
   - conference
 tags:
