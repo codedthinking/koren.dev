@@ -5,7 +5,7 @@ author:
 speaker: Zsófia Bárány
 title: Broken Ladders AI, Teamwork, and the Dynamics of Skill Formation in the Workplace
 description: CEPR Macroeconomics and Growth Annual Symposium 2025
-image: /assets/images/stock/igor-omilaev-eGGFZ5X2LnA-unsplash.jpg
+image: https://koren.dev/assets/images/stock/igor-omilaev-eGGFZ5X2LnA-unsplash.jpg
 categories: 
 - macroeconomics
 - conference

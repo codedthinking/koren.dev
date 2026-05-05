@@ -5,7 +5,7 @@ speaker: Miklós Koren
 date: 2026-06-19
 aspectratio: 169
 code: missing
-image: /assets/images/stock/robot-color-YKW0JjP7rlU-unsplash.jpg
+image: https://koren.dev/assets/images/stock/robot-color-YKW0JjP7rlU-unsplash.jpg
 description: CESifo Venice Summer Institute on AI and the economy.
 project: ai-learning
 categories:

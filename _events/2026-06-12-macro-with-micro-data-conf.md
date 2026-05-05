@@ -5,7 +5,7 @@ speaker: Miklós Koren
 date: 2026-06-12
 aspectratio: 169
 code: missing
-image: /assets/images/stock/lightbulb-hand-F2ZZNLh1ttc-unsplash.jpg
+image: https://koren.dev/assets/images/stock/lightbulb-hand-F2ZZNLh1ttc-unsplash.jpg
 description: "Annual CESifo area conference on macroeconomic research using micro-level data. June 12, 2026, ifo Institute, Munich."
 categories:
     - conference

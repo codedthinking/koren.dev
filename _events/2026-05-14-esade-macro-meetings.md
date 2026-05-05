@@ -4,7 +4,7 @@ speaker: Miklós Koren
 date: 2026-05-14
 aspectratio: 169
 code: missing
-image: /assets/images/stock/money-7tym9MfVNzw-unsplash.jpg
+image: https://koren.dev/assets/images/stock/money-7tym9MfVNzw-unsplash.jpg
 project: ai-learning
 categories:
     - conference

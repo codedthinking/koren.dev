@@ -5,7 +5,7 @@ speaker: Miklós Koren
 date: 2026-05-08
 aspectratio: 169
 code: missing
-image: /assets/images/stock/lecture-hall-tGgGGYrbwTk-unsplash.jpg
+image: https://koren.dev/assets/images/stock/lecture-hall-tGgGGYrbwTk-unsplash.jpg
 description: "Annual Carnegie-Rochester-NYU conference on public policy."
 project: babyboom
 categories:

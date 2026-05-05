@@ -5,7 +5,7 @@ speaker: Miklós Koren
 date: 2026-05-21
 aspectratio: 169
 code: missing
-image: /assets/images/stock/stock-chart-MA1Xobltz5o-unsplash.jpg
+image: https://koren.dev/assets/images/stock/stock-chart-MA1Xobltz5o-unsplash.jpg
 description: "Fifth edition of the Tilburg Macroeconomics Conference (May 21-22, 2026), organized by Tilburg School of Economics and Management. Keynotes: Kjetil Storesletten (University of Minnesota) and Diego Restuccia (University of Toronto)."
 project: ai-learning
 categories:
