@@ -2,7 +2,7 @@
 published: false
 title: "33rd CEPR European Summer Symposium in International Macroeconomics (ESSIM)"
 speaker: Miklós Koren
-date: 2026-05-20
+date: 2026-05-05
 aspectratio: 169
 code: missing
 image: https://koren.dev/assets/images/stock/bar-graph-zvbPbSz5BFo-unsplash.jpg

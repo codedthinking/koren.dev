@@ -2,7 +2,7 @@
 published: false
 title: "Carnegie-Rochester-NYU Public Policy Conference"
 speaker: Miklós Koren
-date: 2026-05-08
+date: 2026-05-05
 aspectratio: 169
 code: missing
 image: https://koren.dev/assets/images/stock/lecture-hall-tGgGGYrbwTk-unsplash.jpg

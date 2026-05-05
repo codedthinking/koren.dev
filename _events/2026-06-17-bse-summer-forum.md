@@ -1,7 +1,7 @@
 ---
 title: "BSE Summer Forum — Economics of Transformative AI"
 speaker: Zsófia Bárány, Miklós Koren
-date: 2026-06-17
+date: 2026-05-05
 event_date: 2026-06-17
 author:
   - "Zsófia Bárány (CEU)"

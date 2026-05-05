@@ -2,7 +2,7 @@
 published: false
 title: "BSE Summer Forum 2026"
 speaker: Miklós Koren
-date: 2026-06-02
+date: 2026-05-05
 aspectratio: 169
 code: missing
 image: https://koren.dev/assets/images/stock/conference-audience-d1BD1aY050A-unsplash.jpg

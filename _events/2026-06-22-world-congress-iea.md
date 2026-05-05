@@ -1,7 +1,7 @@
 ---
 title: "21st World Congress of the International Economic Association"
 speaker: Miklós Koren
-date: 2026-06-22
+date: 2026-05-05
 aspectratio: 169
 code: missing
 image: https://koren.dev/assets/images/stock/markus-krisetya-k0Jo8m6DO6k-unsplash.jpg

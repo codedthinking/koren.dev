@@ -2,7 +2,7 @@
 published: false
 title: "GitHub Universe 2026"
 speaker: Miklós Koren
-date: 2026-10-28
+date: 2026-05-05
 aspectratio: 169
 code: missing
 image: https://koren.dev/assets/images/stock/group-desks-yYWOYeXjLY-unsplash.jpg

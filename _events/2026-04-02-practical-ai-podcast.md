@@ -1,7 +1,7 @@
 ---
 title: "Vibe Coding Kills Open Source"
 speaker: Miklós Koren
-date: 2026-03-25
+date: 2026-05-05
 aspectratio: 169
 code: missing
 image: https://koren.dev/assets/images/stock/microphone-E4vfSvTRSvs-unsplash.jpg

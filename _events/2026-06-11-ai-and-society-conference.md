@@ -2,7 +2,7 @@
 published: false
 title: "AI and Society Conference 2026"
 speaker: Miklós Koren
-date: 2026-06-11
+date: 2026-05-05
 aspectratio: 169
 code: missing
 image: https://koren.dev/assets/images/stock/robot-bw-fv1EFjgIb94-unsplash.jpg

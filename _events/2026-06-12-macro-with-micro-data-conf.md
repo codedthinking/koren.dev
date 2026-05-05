@@ -2,7 +2,7 @@
 published: false
 title: "CESifo Area Conference: Macro with Micro Data 2026"
 speaker: Miklós Koren
-date: 2026-06-12
+date: 2026-05-05
 aspectratio: 169
 code: missing
 image: https://koren.dev/assets/images/stock/lightbulb-hand-F2ZZNLh1ttc-unsplash.jpg

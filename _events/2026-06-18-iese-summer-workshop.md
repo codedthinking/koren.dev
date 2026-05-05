@@ -1,7 +1,7 @@
 ---
 title: "IESE Economics Summer Workshop"
 speaker: Miklós Koren
-date: 2026-06-18
+date: 2026-05-05
 event_date: 2026-06-18
 author:
   - "Miklós Koren (CEU)"

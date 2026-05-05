@@ -2,7 +2,7 @@
 published: false
 title: "CEPR RPN Growth, Innovation and Social Model in Europe: Inaugural Workshop"
 speaker: Miklós Koren
-date: 2026-06-04
+date: 2026-05-05
 aspectratio: 169
 code: missing
 image: https://koren.dev/assets/images/stock/lightbulb-notepad-ksstLihQ4M-unsplash.jpg

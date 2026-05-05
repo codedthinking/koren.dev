@@ -1,7 +1,7 @@
 ---
 title: "Esade Macro Meetings 2026"
 speaker: Miklós Koren
-date: 2026-05-14
+date: 2026-05-05
 aspectratio: 169
 code: missing
 image: https://koren.dev/assets/images/stock/money-7tym9MfVNzw-unsplash.jpg

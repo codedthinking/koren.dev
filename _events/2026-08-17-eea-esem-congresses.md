@@ -2,7 +2,7 @@
 published: false
 title: "EEA-ESEM 2026: 41st Annual Congress of the European Economic Association"
 speaker: Miklós Koren
-date: 2026-08-17
+date: 2026-05-05
 aspectratio: 169
 code: missing
 image: https://koren.dev/assets/images/stock/man-machine-SftpdQvhpI-unsplash.jpg

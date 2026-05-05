@@ -1,7 +1,7 @@
 ---
 title: "Hackathon Learning Materials"
 speaker: Miklós Koren
-date: 2026-02-26
+date: 2026-05-05
 aspectratio: 169
 code: missing
 image: https://koren.dev/assets/images/stock/group-laptops-QckxruozjRg-unsplash.jpg

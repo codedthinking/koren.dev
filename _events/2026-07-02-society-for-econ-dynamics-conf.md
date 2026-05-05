@@ -2,7 +2,7 @@
 published: false
 title: "Annual Meeting of the Society for Economic Dynamics 2026"
 speaker: Miklós Koren
-date: 2026-07-02
+date: 2026-05-05
 aspectratio: 169
 code: missing
 image: https://koren.dev/assets/images/stock/industrial-machine-V7BRdLkbzpY-unsplash.jpg

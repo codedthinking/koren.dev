@@ -2,7 +2,7 @@
 published: false
 title: "Tilburg Macroeconomics Conference 2026"
 speaker: Miklós Koren
-date: 2026-05-21
+date: 2026-05-05
 aspectratio: 169
 code: missing
 image: https://koren.dev/assets/images/stock/stock-chart-MA1Xobltz5o-unsplash.jpg

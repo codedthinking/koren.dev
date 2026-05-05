@@ -2,7 +2,7 @@
 published: false
 title: "Firms, Labour Markets and Development Workshop (FILMAD)"
 speaker: Miklós Koren
-date: 2026-06-26
+date: 2026-05-05
 aspectratio: 169
 code: missing
 image: https://koren.dev/assets/images/stock/factory-workers-FbBMvEfL0EQ-unsplash.jpg
