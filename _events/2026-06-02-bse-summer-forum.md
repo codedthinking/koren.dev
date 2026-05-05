@@ -5,7 +5,7 @@ speaker: Miklós Koren
 date: 2026-06-02
 aspectratio: 169
 code: missing
-image: https://koren.dev/assets/images/macromanagers-logo2.svg
+image: /assets/images/stock/conference-audience-d1BD1aY050A-unsplash.jpg
 description: "Series of independent workshops bringing together top researchers to debate the frontier of knowledge in Economics. June 2-19, 2026, at UAB Casa Convalescència, Barcelona."
 categories:
     - conference

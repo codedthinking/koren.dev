@@ -4,7 +4,7 @@ speaker: Miklós Koren
 date: 2026-06-22
 aspectratio: 169
 code: missing
-image: https://koren.dev/assets/images/macromanagers-logo2.svg
+image: /assets/images/stock/markus-krisetya-k0Jo8m6DO6k-unsplash.jpg
 description: "Triennial congress of the International Economic Association, organized with the Serbian Association of Economists. Held at Sava Convention Centre, Belgrade, June 22-26, 2026."
 project: babyboom
 categories:
