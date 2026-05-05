@@ -5,7 +5,7 @@ date: 2026-06-18
 event_date: 2026-06-18
 author:
   - "Miklós Koren (CEU)"
-description: "Presenting 'The Directions of Technical Change' (with Zsófia Bárány) at the IESE Economics Summer Workshop."
+description: "'The Directions of Technical Change' (with Zsófia Bárány) at the IESE Economics Summer Workshop."
 location: "Barcelona, Spain"
 image: https://koren.dev/assets/images/stock/Past_jovokutatas.jpg
 categories:
