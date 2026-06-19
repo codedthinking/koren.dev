@@ -1,0 +1,351 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Directions of Technical Change — IESE Talk Replay</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; overflow: hidden; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+         background: #f5f5f5; color: #222; display: flex; flex-direction: column; }
+
+  .top-bar { background: #fff; border-bottom: 1px solid #ddd; padding: 6px 16px;
+             display: flex; align-items: center; justify-content: space-between; flex-shrink: 0; }
+  .top-bar h1 { font-size: 14px; font-weight: 600; color: #E52020; }
+  .top-bar .slide-counter { font-size: 13px; color: #999; font-family: 'SF Mono', 'Fira Code', monospace; }
+
+  .slide-area { flex: 1; min-height: 0; position: relative; background: #fff; }
+  .slide-area iframe { width: 100%; height: 100%; border: none; }
+
+  .controls-bar { background: #fff; border-top: 1px solid #ddd; padding: 8px 16px 6px; flex-shrink: 0; }
+  .timeline-row { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+  .time-label { font-size: 12px; font-family: 'SF Mono', 'Fira Code', monospace; color: #666; min-width: 42px; text-align: center; }
+  .track { position: relative; flex: 1; height: 6px; background: #e0e0e0; border-radius: 3px; cursor: pointer; }
+  .track-fill { height: 100%; background: #E52020; border-radius: 3px; width: 0%; pointer-events: none; }
+  .scene-dot { position: absolute; top: 50%; width: 8px; height: 8px; background: #33658A; border-radius: 50%;
+               transform: translate(-50%, -50%); z-index: 2; pointer-events: none; }
+  .scene-dot.active { background: #E52020; transform: translate(-50%, -50%) scale(1.4); }
+  .scene-buttons { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; }
+  .scene-btn { font-size: 11px; padding: 3px 8px; border: 1px solid #ddd; border-radius: 12px;
+               background: #fff; color: #555; cursor: pointer; white-space: nowrap; transition: all .15s; }
+  .scene-btn:hover { border-color: #E52020; color: #E52020; }
+  .scene-btn.active { background: #E52020; color: #fff; border-color: #E52020; }
+  .transport { display: flex; align-items: center; gap: 12px; }
+  .play-btn { width: 36px; height: 36px; border-radius: 50%; border: 2px solid #E52020; background: #fff;
+              color: #E52020; font-size: 16px; cursor: pointer; display: flex; align-items: center;
+              justify-content: center; transition: all .15s; }
+  .play-btn:hover { background: #E52020; color: #fff; }
+  .nav-btn { font-size: 12px; padding: 4px 10px; border: 1px solid #ddd; border-radius: 4px;
+             background: #fff; color: #555; cursor: pointer; }
+  .nav-btn:hover { border-color: #33658A; color: #33658A; }
+  .status { font-size: 12px; color: #999; margin-left: auto; }
+  .status .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 4px; background: #ccc; }
+  .status .dot.ready { background: #22c55e; }
+  .status .dot.playing { background: #E52020; animation: pulse 1s infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .4; } }
+  .speed-btn { font-size: 11px; padding: 3px 6px; border: 1px solid #ddd; border-radius: 4px;
+               background: #fff; color: #555; cursor: pointer; min-width: 38px; text-align: center; }
+  .speed-btn:hover { border-color: #33658A; }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <h1>The Directions of Technical Change &mdash; IESE 2026</h1>
+  <span class="slide-counter" id="slideCounter">0 / 0</span>
+</div>
+
+<div class="slide-area">
+  <iframe id="slideFrame" src="slides.html"></iframe>
+</div>
+
+<div class="controls-bar">
+  <div class="timeline-row">
+    <span class="time-label" id="timeCurrent">0:00</span>
+    <div class="track" id="track">
+      <div class="track-fill" id="trackFill"></div>
+    </div>
+    <span class="time-label" id="timeTotal">0:00</span>
+  </div>
+  <div class="scene-buttons" id="sceneButtons"></div>
+  <div class="transport">
+    <button class="nav-btn" id="prevScene" title="Previous scene">&laquo; Prev</button>
+    <button class="play-btn" id="playBtn" title="Play / Pause">&#9654;</button>
+    <button class="nav-btn" id="nextScene" title="Next scene">Next &raquo;</button>
+    <button class="speed-btn" id="speedBtn" title="Playback speed">1&times;</button>
+    <span class="status"><span class="dot" id="statusDot"></span><span id="statusText">Loading&hellip;</span></span>
+  </div>
+</div>
+
+<audio id="audio" preload="auto">
+  <source src="https://github.com/codedthinking/cdn.thnk.ng/releases/download/v2026-06-18/2026-06-18-iese.m4a" type="audio/mp4">
+</audio>
+
+<script>
+var AUDIO_OFFSET = 0;
+
+// One cue per slide (0-46). scene: true → gets a button + dot on timeline.
+// Skipped slides share the timestamp of the next shown slide (zero duration).
+var CUES = [
+  { audio_s:    0, slide:  0, label: "Title",                    scene: true },  //  0 title
+  { audio_s:   29, slide:  1, label: "Two workers"                           },  //  1
+  { audio_s:   65, slide:  2, label: "Free disposal"                         },  //  2
+  { audio_s:   78, slide:  3, label: "Convex hull"                           },  //  3
+  { audio_s:  104, slide:  4, label: "Linear PPS"                            },  //  4
+  { audio_s:  119, slide:  5, label: "Many workers"                          },  //  5
+  { audio_s:  138, slide:  6, label: "Many hull"                             },  //  6
+  { audio_s:  151, slide:  7, label: "Ellipse PPS"                           },  //  7
+  { audio_s:  169, slide:  8, label: "Model",                    scene: true },  //  8 section
+  { audio_s:  173, slide:  9, label: "Ingredients"                           },  //  9
+  { audio_s:  235, slide: 10, label: "Worker's problem"                      },  // 10
+  { audio_s:  242, slide: 11, label: "Different jobs"                        },  // 11
+  { audio_s:  247, slide: 12, label: "Optimal task mix"                      },  // 12
+  { audio_s:  250, slide: 13, label: "Productivity"                          },  // 13
+  { audio_s:  253, slide: 14, label: "Jevons' Paradox"                       },  // 14
+  { audio_s:  256, slide: 15, label: "Shadow prices",            scene: true },  // 15
+  { audio_s:  298, slide: 16, label: "Shadow prices fig"                     },  // 16
+  { audio_s:  343, slide: 17, label: "Budget set"                            },  // 17
+  { audio_s:  359, slide: 18, label: "Machine offer",            scene: true },  // 18
+  { audio_s:  381, slide: 19, label: "Would you buy it?"                     },  // 19
+  { audio_s:  415, slide: 20, label: "How about now?"                        },  // 20
+  { audio_s:  424, slide: 21, label: "AI alone worse"                        },  // 21
+  { audio_s:  444, slide: 22, label: "AI + human better"                     },  // 22
+  { audio_s:  475, slide: 23, label: "AI"                                    },  // 23 section
+  { audio_s:  478, slide: 24, label: "What can AI do?",          scene: true },  // 24
+  { audio_s:  543, slide: 25, label: "Convex hull eq."                       },  // 25
+  { audio_s:  563, slide: 26, label: "Convex hull fig."                      },  // 26
+  { audio_s:  591, slide: 27, label: "Abs. not comp. adv.",      scene: true },  // 27
+  { audio_s:  801, slide: 28, label: "More capable AI"                       },  // 28
+  { audio_s:  808, slide: 29, label: "Adoption"                              },  // 29 section
+  { audio_s:  811, slide: 30, label: "When to adopt?",           scene: true },  // 30
+  { audio_s:  828, slide: 31, label: "First task threshold"                  },  // 31
+  { audio_s:  895, slide: 32, label: "Multitask adoption"                    },  // 32
+  { audio_s:  911, slide: 33, label: "General structure"                     },  // 33
+  { audio_s:  941, slide: 34, label: "Model predictions",        scene: true },  // 34
+  { audio_s: 1049, slide: 35, label: "Shout-outs"                            },  // 35
+  { audio_s: 1105, slide: 36, label: "Empirical example"                     },  // 36 section
+  { audio_s: 1108, slide: 37, label: "Data sources",             scene: true },  // 37
+  { audio_s: 1182, slide: 38, label: "Task heatmap"                          },  // 38
+  { audio_s: 1213, slide: 39, label: "AI/human time ratio"                   },  // 39
+  { audio_s: 1245, slide: 40, label: "Adoption thresholds",      scene: true },  // 40
+  { audio_s: 1347, slide: 41, label: "AI time share"                         },  // 41
+  { audio_s: 1369, slide: 42, label: "N adopted tasks"                       },  // 42
+  { audio_s: 1378, slide: 43, label: "First adopted task"                    },  // 43
+  { audio_s: 1398, slide: 44, label: "Take-away figure",         scene: true },  // 44
+  { audio_s: 1410, slide: 45, label: "Appendix"                              },  // 45 section
+  { audio_s: 1413, slide: 46, label: "Acknowledgements"                      }   // 46
+];
+
+// ======== DOM ========
+var audio       = document.getElementById('audio');
+var slideFrame  = document.getElementById('slideFrame');
+var playBtn     = document.getElementById('playBtn');
+var prevBtn     = document.getElementById('prevScene');
+var nextBtn     = document.getElementById('nextScene');
+var speedBtn    = document.getElementById('speedBtn');
+var track       = document.getElementById('track');
+var trackFill   = document.getElementById('trackFill');
+var timeCurrent = document.getElementById('timeCurrent');
+var timeTotal   = document.getElementById('timeTotal');
+var slideCounter= document.getElementById('slideCounter');
+var statusDot   = document.getElementById('statusDot');
+var statusText  = document.getElementById('statusText');
+var sceneDiv    = document.getElementById('sceneButtons');
+
+var playing     = false;
+var audioLoaded = false;
+var revealReady = false;
+var totalSlides = 0;
+var currentCueIdx = -1;
+var pendingSeek = null;  // stash seek target until audio is ready
+var speeds = [0.75, 1, 1.25, 1.5, 2];
+var speedIdx = 1;
+
+// ======== Helpers ========
+function fmt(s) {
+  s = Math.max(0, Math.floor(s));
+  var m = Math.floor(s / 60);
+  var sec = s % 60;
+  return m + ':' + (sec < 10 ? '0' : '') + sec;
+}
+function totalDuration() { return audio.duration ? audio.duration - AUDIO_OFFSET : 0; }
+function sessionTime() { return Math.max(0, audio.currentTime - AUDIO_OFFSET); }
+
+// ======== Scene buttons & dots ========
+var sceneCues = CUES.filter(function(c) { return c.scene; });
+sceneCues.forEach(function(c) {
+  var btn = document.createElement('button');
+  btn.className = 'scene-btn';
+  btn.textContent = c.label;
+  btn.onclick = function() { seekTo(c.audio_s); };
+  sceneDiv.appendChild(btn);
+  var dot = document.createElement('div');
+  dot.className = 'scene-dot';
+  track.appendChild(dot);
+});
+
+function layoutDots() {
+  var dur = totalDuration();
+  if (dur <= 0) return;
+  var dots = track.querySelectorAll('.scene-dot');
+  sceneCues.forEach(function(c, i) {
+    dots[i].style.left = ((c.audio_s - AUDIO_OFFSET) / dur * 100) + '%';
+  });
+}
+
+// ======== Slide control (direct access via same-origin iframe) ========
+function goToSlide(n) {
+  if (!revealReady) return;
+  try {
+    slideFrame.contentWindow.Reveal.slide(n);
+  } catch(e) {
+    console.warn('goToSlide failed:', e);
+  }
+}
+
+function findCueIndex(t) {
+  for (var i = CUES.length - 1; i >= 0; i--) {
+    if (t >= CUES[i].audio_s) return i;
+  }
+  return 0;
+}
+function findSceneIndex(t) {
+  for (var i = sceneCues.length - 1; i >= 0; i--) {
+    if (t >= sceneCues[i].audio_s) return i;
+  }
+  return 0;
+}
+
+// ======== Sync ========
+function onTimeUpdate() {
+  syncToTime(audio.currentTime);
+}
+
+// ======== Transport ========
+function togglePlay() {
+  if (!audioLoaded) return;
+  playing ? audio.pause() : audio.play();
+}
+
+function seekTo(sec) {
+  if (audioLoaded) {
+    audio.currentTime = sec;
+  } else {
+    pendingSeek = sec;
+  }
+  currentCueIdx = -1; // force slide update
+  syncToTime(sec);
+}
+
+// Update UI to a given time (without reading audio.currentTime)
+function syncToTime(t) {
+  var dur = totalDuration();
+  var sess = Math.max(0, t - AUDIO_OFFSET);
+  if (dur > 0) trackFill.style.width = (sess / dur * 100) + '%';
+  timeCurrent.textContent = fmt(sess);
+
+  var idx = findCueIndex(t);
+  if (idx !== currentCueIdx) {
+    currentCueIdx = idx;
+    goToSlide(CUES[idx].slide);
+  }
+  slideCounter.textContent = (CUES[idx] ? CUES[idx].slide : 0) + ' / ' + (totalSlides - 1);
+
+  var si = findSceneIndex(t);
+  sceneDiv.querySelectorAll('.scene-btn').forEach(function(b, i) { b.classList.toggle('active', i === si); });
+  track.querySelectorAll('.scene-dot').forEach(function(d, i) { d.classList.toggle('active', i === si); });
+}
+
+playBtn.onclick = togglePlay;
+prevBtn.onclick = function() {
+  var t = audio.currentTime - 1.5;
+  for (var i = sceneCues.length - 1; i >= 0; i--)
+    if (sceneCues[i].audio_s < t) { seekTo(sceneCues[i].audio_s); return; }
+  seekTo(AUDIO_OFFSET);
+};
+nextBtn.onclick = function() {
+  var t = audio.currentTime + 0.5;
+  for (var i = 0; i < sceneCues.length; i++)
+    if (sceneCues[i].audio_s > t) { seekTo(sceneCues[i].audio_s); return; }
+};
+speedBtn.onclick = function() {
+  speedIdx = (speedIdx + 1) % speeds.length;
+  audio.playbackRate = speeds[speedIdx];
+  speedBtn.textContent = speeds[speedIdx] + '\u00d7';
+};
+track.onclick = function(e) {
+  var rect = track.getBoundingClientRect();
+  seekTo(AUDIO_OFFSET + ((e.clientX - rect.left) / rect.width) * totalDuration());
+};
+
+// ======== Keyboard ========
+document.addEventListener('keydown', function(e) {
+  if (e.code === 'Space')      { e.preventDefault(); togglePlay(); }
+  if (e.code === 'ArrowRight') { e.preventDefault(); seekTo(audio.currentTime + 10); }
+  if (e.code === 'ArrowLeft')  { e.preventDefault(); seekTo(Math.max(AUDIO_OFFSET, audio.currentTime - 10)); }
+});
+
+// ======== Audio events ========
+audio.addEventListener('loadedmetadata', function() {
+  audioLoaded = true;
+  timeTotal.textContent = fmt(totalDuration());
+  layoutDots();
+  statusDot.classList.add('ready');
+  statusText.textContent = 'Ready';
+  if (pendingSeek !== null) {
+    audio.currentTime = pendingSeek;
+    pendingSeek = null;
+  }
+});
+audio.addEventListener('timeupdate', onTimeUpdate);
+audio.addEventListener('play', function() {
+  playing = true; playBtn.innerHTML = '&#9646;&#9646;';
+  statusDot.className = 'dot playing'; statusText.textContent = 'Playing';
+});
+audio.addEventListener('pause', function() {
+  playing = false; playBtn.innerHTML = '&#9654;';
+  statusDot.className = 'dot ready'; statusText.textContent = 'Paused';
+});
+audio.addEventListener('ended', function() {
+  playing = false; playBtn.innerHTML = '&#9654;';
+  statusDot.className = 'dot ready'; statusText.textContent = 'Ended';
+});
+
+// ======== Reveal.js init (wait for iframe) ========
+slideFrame.addEventListener('load', function() {
+  function waitForReveal() {
+    try {
+      var R = slideFrame.contentWindow.Reveal;
+      if (R && R.isReady()) {
+        revealReady = true;
+        totalSlides = R.getTotalSlides();
+        // Resize reveal to match iframe container
+        var w = slideFrame.offsetWidth;
+        var h = slideFrame.offsetHeight;
+        if (w > 0 && h > 0) R.configure({ width: w, height: h });
+        slideCounter.textContent = '0 / ' + (totalSlides - 1);
+        goToSlide(0);
+        return;
+      }
+    } catch(e) { console.warn('Waiting for Reveal...', e); }
+    setTimeout(waitForReveal, 200);
+  }
+  waitForReveal();
+});
+
+// Keep reveal sized to iframe on window resize
+window.addEventListener('resize', function() {
+  if (!revealReady) return;
+  try {
+    var w = slideFrame.offsetWidth;
+    var h = slideFrame.offsetHeight;
+    if (w > 0 && h > 0) slideFrame.contentWindow.Reveal.configure({ width: w, height: h });
+  } catch(e) {}
+});
+</script>
+
+</body>
+</html>

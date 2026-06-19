@@ -1,0 +1,611 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Miklós Koren">
+  <meta name="author" content="Zsófia Bárány">
+  <meta name="author" content="Ulrich Wohak">
+  <meta name="dcterms.date" content="2026-01-01">
+  <title>The Directions of Technical Change</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@4/dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@4/dist/reveal.css">
+  <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@4/dist/theme/white.css" id="theme">
+  <style>
+    .reveal .slides { font-size: 0.75em; }
+    .reveal h1, .reveal h2, .reveal h3 { text-transform: none !important; }
+    .reveal h1 { font-size: 2.2em; color: #E52020; }
+    .reveal h2 { font-size: 1.5em; color: #E52020; }
+    .reveal h3 { font-size: 1.1em; }
+    .reveal section img { border: none; box-shadow: none; max-height: 80vh; max-width: 95%; object-fit: contain; }
+    .reveal ul, .reveal ol { display: block; text-align: left; }
+    .reveal .math { font-size: 1.05em; }
+    .reveal pre { font-size: 0.85em; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">The Directions of Technical Change</h1>
+  <p class="author">Miklós Koren</p>
+  <p class="author">Zsófia Bárány</p>
+  <p class="author">Ulrich Wohak</p>
+  <p class="date">2026</p>
+</section>
+
+<section id="suppose-we-observe-a-worker-doing-two-tasks"
+class="slide level2">
+<h2>Suppose we observe a worker doing two tasks</h2>
+<p><img data-src="fig/slide_two_workers.svg" /></p>
+</section>
+<section id="the-worker-can-also-do-less-free-disposal"
+class="slide level2">
+<h2>The worker can also do less: free disposal</h2>
+<p><img data-src="fig/slide_free_disposal.svg" /></p>
+</section>
+<section id="time-can-be-split-across-tasks-convex-hull"
+class="slide level2">
+<h2>Time can be split across tasks: convex hull</h2>
+<p><img data-src="fig/slide_convex_hull.svg" /></p>
+</section>
+<section
+id="with-perfect-substitution-linear-production-possibility-set-pps"
+class="slide level2">
+<h2>With perfect substitution: linear production possibility set
+(PPS)</h2>
+<p><img data-src="fig/slide_linear_pps.svg" /></p>
+</section>
+<section id="many-observed-tasks-for-the-same-worker"
+class="slide level2">
+<h2>Many observed tasks for the same worker</h2>
+<p><img data-src="fig/slide_many_workers.svg" /></p>
+</section>
+<section id="pps-is-the-convex-hull" class="slide level2">
+<h2>PPS is the convex hull</h2>
+<p><img data-src="fig/slide_many_hull.svg" /></p>
+</section>
+<section id="smooth-approximation-constant-elasticity-pps"
+class="slide level2">
+<h2>Smooth approximation: constant-elasticity PPS</h2>
+<p><img data-src="fig/slide_ellipse_pps.svg" /></p>
+</section>
+<section id="a-model-of-ai-adoption" class="slide level2">
+<h2>A model of AI adoption</h2>
+</section>
+<section id="ingredients" class="slide level2">
+<h2>Ingredients</h2>
+<ol type="1">
+<li>Human capabilities bundled in a convex production possibility set
+(PPS)</li>
+<li>AI capabilities limited by human supervision/attention time</li>
+<li>(Flexible task allocation responsive to skills and job
+requirements)</li>
+</ol>
+</section>
+<section id="the-workers-problem" class="slide level2">
+<h2>The worker’s problem</h2>
+<p><span class="math display">\[\max_{x} \; F(x) = \left(\sum_{i=1}^N
+\theta_i^{1/\sigma}
+x_i^{1-1/\sigma}\right)^{\sigma/(\sigma-1)}\]</span></p>
+<p>subject to</p>
+<p><span class="math display">\[
+\left(
+  \sum_{i=1}^N (x_i/s_i)^{1+1/\gamma}
+  \right)^{\gamma/(\gamma+1)} \leq B
+\]</span></p>
+<p><span class="math inline">\(x\)</span> = activities, <span
+class="math inline">\(\theta\)</span> = job requirements (CES), <span
+class="math inline">\(s\)</span> = skills (CET), <span
+class="math inline">\(B\)</span> = time in a day.</p>
+<p><span class="math inline">\(\gamma\)</span> = elasticity of
+transformation (PPF curvature)</p>
+<p><span class="math inline">\(\sigma\)</span> = elasticity of
+substitution (isoquant curvature)</p>
+</section>
+<section id="different-jobs-have-different-requirements"
+class="slide level2">
+<h2>Different jobs have different requirements</h2>
+<p><img data-src="fig/journals_isoquants.svg" /></p>
+</section>
+<section id="optimal-task-mix-depends-on-skills-and-requirements"
+class="slide level2">
+<h2>Optimal task mix depends on skills and requirements</h2>
+<p><span class="math display">\[
+x_i \propto s_i^{(1+\gamma)\sigma/(\gamma+\sigma)}
+\theta_i^{\gamma/(\gamma+\sigma)}
+\]</span></p>
+</section>
+<section id="productivity-is-a-ces-weighted-average-of-skills"
+class="slide level2">
+<h2>Productivity is a CES-weighted average of skills</h2>
+<p>Output per unit of time <span class="math display">\[
+\Phi =
+      \left[\sum_k
+    (s_k^{\sigma-1} \theta_k)^{(\gamma+1)/(\gamma+\sigma)}
+    \right]^{(\gamma+\sigma)/[(\gamma+1)(\sigma-1)]}
+\]</span></p>
+</section>
+<section id="jevons-paradox" class="slide level2">
+<h2>Jevons’ Paradox</h2>
+<p>Time share on activity <span class="math inline">\(i\)</span>: <span
+class="math display">\[
+\omega_i^A =
+  \frac{(s_i^{\sigma-1} \theta_i)^{(\gamma+1)/(\gamma+\sigma)}}
+    {
+      \sum_k
+    (s_k^{\sigma-1} \theta_k)^{(\gamma+1)/(\gamma+\sigma)}
+    }
+\]</span></p>
+<p>Increases in skill <span class="math inline">\(s_i\)</span> if <span
+class="math inline">\(\sigma &gt; 1\)</span>. Relevant range for
+knowledge work.</p>
+</section>
+<section id="shadow-prices-express-scarcity-marginal-cost-of-human-time"
+class="slide level2">
+<h2>Shadow prices express scarcity (marginal cost of human time)</h2>
+<p><span class="math display">\[
+\xi_i =
+\left(\frac{\theta_i}{s_i^{1+\gamma}}\right)^{1/(\gamma+\sigma)},
+\]</span></p>
+<p>High for activities that are required (<span
+class="math inline">\(\theta_i\)</span> high) but hard to do (<span
+class="math inline">\(s_i\)</span> low).</p>
+</section>
+<section id="shadow-prices" class="slide level2">
+<h2>Shadow prices</h2>
+<p><img data-src="fig/autarky_prices.svg" /></p>
+</section>
+<section id="the-budget-set-is-larger-than-the-pps"
+class="slide level2">
+<h2>The budget set is larger than the PPS</h2>
+<p><img data-src="fig/autarky_prices_shaded.svg" /></p>
+</section>
+<section
+id="suppose-a-machine-can-provide-this-amount-of-code-and-writing-per-hour"
+class="slide level2">
+<h2>Suppose a machine can provide this amount of code and writing per
+hour</h2>
+<p><img data-src="fig/autarky_prices1a.svg" /></p>
+</section>
+<section id="would-you-buy-it" class="slide level2">
+<h2>Would you buy it?</h2>
+<p><img data-src="fig/autarky_prices1b.svg" /></p>
+</section>
+<section id="how-about-now" class="slide level2">
+<h2>How about now?</h2>
+<p><img data-src="fig/autarky_prices2a.svg" /></p>
+</section>
+<section id="ai-alone-is-still-worse-than-human-alone"
+class="slide level2">
+<h2>AI alone is still worse than human alone</h2>
+<p><img data-src="fig/autarky_prices2b.svg" /></p>
+</section>
+<section id="but-ai-human-now-better" class="slide level2">
+<h2>But AI + human now better</h2>
+<p><img data-src="fig/autarky_prices2c.svg" /></p>
+</section>
+<section id="ai" class="slide level2">
+<h2>AI</h2>
+</section>
+<section id="what-can-ai-do" class="slide level2">
+<h2>What can AI do?</h2>
+<p>AI can perform any combination of <span class="math inline">\(\{t_1,
+\dots, t_N\}\)</span> tasks, but requires supervision.</p>
+<p><span class="math display">\[
+\max_{x, x_{\text{human}}, \mu} \; F(x)
+\]</span> <span class="math display">\[
+x_i = x_{i,\text{human}} + \mu_i t_i
+\]</span> <span class="math display">\[
+\sum_i \mu_i + g(x_{\text{human}})\leq B
+\]</span></p>
+</section>
+<section id="ai-human-convex-hull" class="slide level2">
+<h2>AI + human = convex hull</h2>
+<p><span class="math display">\[
+X_{AI} = \{x : \sum_i x_i/t_i \leq \mu B\}
+\]</span></p>
+<p><span class="math display">\[
+X_{\text{human}} = \{x : g(x) \leq (1-\mu)B\}
+\]</span></p>
+<p><span class="math display">\[
+X = X_{\text{human}} + X_{AI}
+= \{x : x = x_1 + x_2, x_1 \in X_{\text{human}}, x_2 \in X_{AI}\}
+\]</span></p>
+</section>
+<section id="ai-human-convex-hull-1" class="slide level2">
+<h2>AI + human = convex hull</h2>
+<p><img data-src="fig/technology_tangent_segment.svg" /></p>
+</section>
+<section id="ai-has-an-absolute-but-not-comparative-advantage"
+class="slide level2">
+<h2>AI has an absolute but not comparative advantage</h2>
+<p><img data-src="fig/autarky_prices3a.svg" /></p>
+</section>
+<section id="more-capable-ai-will-get-used-for-coding"
+class="slide level2">
+<h2>More capable AI will get used for coding</h2>
+<p><img data-src="fig/autarky_prices3b.svg" /></p>
+</section>
+<section id="adoption" class="slide level2">
+<h2>Adoption</h2>
+</section>
+<section id="when-to-adopt-ai" class="slide level2">
+<h2>When to adopt AI?</h2>
+<p>Whenever the value of AI tasks,</p>
+<p>evaluated at the shadow prices of the human PPS,</p>
+<p>exceeds your current output.</p>
+</section>
+<section id="adopt-ai-for-first-task-i" class="slide level2">
+<h2>Adopt AI for first task <span class="math inline">\(i\)</span></h2>
+<p><span class="math display">\[
+t_i &gt; \left(
+\frac{\gamma}{\gamma+1}
+\right)^{\gamma/(\gamma+1)}
+s_{i}
+\omega_{oi}^{-1/(\gamma+1)}
+\]</span></p>
+<p><span class="math display">\[
+\frac{t_i}{s_i} &gt; \left(
+\frac{\gamma}{\gamma+1}
+\right)^{\gamma/(\gamma+1)}
+\omega_{oi}^{-1/(\gamma+1)} &gt; 1 \qquad \text{if } \gamma &lt; \infty
+\]</span></p>
+</section>
+<section id="multitask-adoption" class="slide level2">
+<h2>Multitask adoption</h2>
+<p>Order tasks by highest <span
+class="math inline">\(\omega_{oi}^{1/(\gamma+1)}t_i/s_i\)</span>.</p>
+<p>There exist <span class="math inline">\(\chi_1 &lt; \chi_2 &lt; \dots
+&lt; \chi_N\)</span> such that AI is used for the first <span
+class="math inline">\(k\)</span> tasks if and only if <span
+class="math display">\[
+\chi_{k+1} \geq \omega_{oi}^{1/(\gamma+1)}t_k/s_k \geq \chi_k
+\]</span></p>
+</section>
+<section id="the-general-structure" class="slide level2">
+<h2>The general structure</h2>
+<p>All results depend on <strong>convexity</strong>, not on CES–CET:</p>
+<ul>
+<li>Any convex PPS <span class="math inline">\(X_A = \{x : g(x) \leq
+B\}\)</span> with quasi-convex hom(1) production function <span
+class="math inline">\(F\)</span></li>
+<li>Shadow prices <span class="math inline">\(\xi\)</span> defined by
+tangency (supporting hyperplane)</li>
+</ul>
+<p>CES–CET gives closed forms; the geometry works for any <span
+class="math inline">\(F\)</span> and <span
+class="math inline">\(g\)</span>.</p>
+<p>Convexity is a reduced-form way to capture task complementarity
+within a fixed time budget.</p>
+</section>
+<section id="model-predictions" class="slide level2">
+<h2>Model predictions</h2>
+<ol type="1">
+<li>Region of non-adoption: absolute advantage is not enough.</li>
+<li>Fast adoption but small productivity effects past this
+threshold.</li>
+<li>Intensive margin: Partial adoption even for augmented tasks</li>
+<li>Different jobs augment+automate different tasks.</li>
+</ol>
+</section>
+<section id="shout-outs" class="slide level2">
+<h2>Shout-outs</h2>
+<h3 id="manuelli-seshadri-2014">Manuelli &amp; Seshadri (2014)</h3>
+<p>Neoclassical theory explains slow adoption of tractors (<span
+class="math inline">\(\varepsilon_{\text{horse}, \text{tractor}} &lt;
+\infty\)</span>).</p>
+<h3 id="garicano-li-and-wu-2026">Garicano, Li and Wu (2026)</h3>
+<p>Human capabilities in <em>strong bundles</em> serve as bottlenecks to
+AI.</p>
+<h3 id="freund-and-mann-2026">Freund and Mann (2026)</h3>
+<p>Automation reshapes the task mix of jobs (<span
+class="math inline">\(\sigma=1, \gamma=\infty\)</span>).</p>
+<h3 id="jones-2025">Jones (2025)</h3>
+<p>Complementarity (low <span class="math inline">\(\sigma\)</span>)
+matters for progress more than benchmarks (<span
+class="math inline">\(t_i\)</span>).</p>
+</section>
+<section id="empirical-example" class="slide level2">
+<h2>Empirical example</h2>
+</section>
+<section id="data-sources" class="slide level2">
+<h2>Data sources</h2>
+<h3 id="antropic-economic-index-aei">Antropic Economic Index (AEI)</h3>
+<p>Task success rates, human times and AI times for O*NET tasks, March
+2026. Aggregate to 332 Intermediate Work Activities (IWAs).</p>
+<p><span class="math display">\[
+\tau_i = \frac{t_i}{s_i} = \frac{\text{human time}}{\text{AI
+time}/\text{success rate}}
+\]</span></p>
+<h3 id="onet-occupational-task-frequencies">O*NET occupational task
+frequencies</h3>
+<p>Use task frequnencies <span
+class="math inline">\(\lambda_{oi}\)</span> (daily, weekly, etc) and
+approximate <span class="math display">\[
+\omega_{oi} \approx \frac{\lambda_{oi}}{\sum_j \lambda_{oj}}
+\]</span></p>
+</section>
+<section id="task-time-shares-across-1016-occupations"
+class="slide level2">
+<h2>Task time shares across 1,016 occupations</h2>
+<p><img data-src="fig/occupation_task_heatmap.svg" /></p>
+</section>
+<section id="task-level-human-timeai-time-ratio" class="slide level2">
+<h2>Task-level human-time/AI-time ratio</h2>
+<p><img data-src="fig/tau_i_cdf.svg" /></p>
+</section>
+<section id="distribution-of-adoption-thresholds" class="slide level2">
+<h2>Distribution of adoption thresholds</h2>
+<p><img data-src="fig/adoption_chi0.svg" /></p>
+</section>
+<section id="ai-time-share" class="slide level2">
+<h2>AI time share</h2>
+<p><img data-src="fig/adoption_lambda.svg" /></p>
+</section>
+<section id="how-many-tasks-does-ai-augment" class="slide level2">
+<h2>How many tasks does AI augment?</h2>
+<p><img data-src="fig/n_adopted_tasks.svg" /></p>
+</section>
+<section id="which-tasks-get-adopted-first" class="slide level2">
+<h2>Which tasks get adopted first?</h2>
+<p><img data-src="fig/first_adopted_task.svg" /></p>
+</section>
+<section id="the-figure-to-take-away" class="slide level2">
+<h2>The figure to take away</h2>
+<p><img data-src="fig/autarky_prices3a.svg" /></p>
+</section>
+<section id="appendix" class="slide level2">
+<h2>Appendix</h2>
+</section>
+<section id="acknowledgements" class="slide level2">
+<h2>Acknowledgements</h2>
+<div style="display:flex;gap:2em;align-items:center">
+<div style="flex:1">
+<p><img data-src="fig/erc.png" style="width:80.0%" /></p>
+</div>
+<div style="flex:1">
+<p><img data-src="fig/elvonal.png" style="width:80.0%" /></p>
+</div>
+</div>
+<p>This research was funded by the European Union under the Horizon
+Europe grant 101061123 and by the National Research, Development and
+Innovation Office (Forefront Research Excellence Program contract number
+144193). Views and opinions expressed are those of the authors only and
+do not necessarily reflect those of the European Union, the European
+Commission, or the National Research, Development and Innovation
+Office.</p>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@4/dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@4/plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@4/plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@4/plugin/zoom/zoom.js"></script>
+  <script src="https://unpkg.com/reveal.js@4/plugin/math/math.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: false,
+
+        // Display the page number of the current slide
+        slideNumber: true,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 1000,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.04,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script>
+Reveal.on("ready",function(){
+  window.addEventListener("message",function(e){
+    if(e.data&&e.data.type==="goToSlide"){Reveal.slide(e.data.slide);}
+    if(e.data&&e.data.type==="getState"){
+      e.source.postMessage({type:"revealState",totalSlides:Reveal.getTotalSlides(),ready:true},"*");
+    }
+    if(e.data&&e.data.type==="resize"&&e.data.width&&e.data.height){
+      Reveal.configure({width:e.data.width,height:e.data.height});
+    }
+  });
+  if(window.parent!==window){window.parent.postMessage({type:"revealState",totalSlides:Reveal.getTotalSlides(),ready:true},"*");}
+});
+</script>
+</body>
+</html>
