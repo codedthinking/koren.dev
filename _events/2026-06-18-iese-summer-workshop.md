@@ -15,4 +15,6 @@ tags:
 links:
   - text: Program
     url: /assets/files/2026-iese-summer-workshop.pdf
+  - text: Slide replay
+    url: /events/iese-2026/
 ---
