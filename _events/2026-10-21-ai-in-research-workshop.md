@@ -10,5 +10,6 @@ location: "Corvinus University of Budapest"
 categories:
     - workshop
 tags:
+    - macromanagers
 links: []
 ---

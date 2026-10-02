@@ -12,6 +12,7 @@ categories:
     - workshop
     - talk
 tags:
+    - macromanagers
 links:
 - text: BPLIM Workshops
   url: "https://github.com/BPLIM/Workshops"

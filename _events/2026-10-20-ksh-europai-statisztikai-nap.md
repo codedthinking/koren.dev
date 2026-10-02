@@ -11,5 +11,6 @@ categories:
     - conference
     - panel
 tags:
+    - macromanagers
 links: []
 ---
