@@ -13,7 +13,9 @@ categories:
 tags:
     - ai
     - business-software
-links: []
+links:
+- text: Slides
+  url: https://github.com/korenmiklos/talks/blob/master/2026-10-16-mlbkt/slides30.pdf
 ---
 
 **11:45 – 12:15**
