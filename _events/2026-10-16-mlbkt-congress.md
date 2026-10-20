@@ -3,7 +3,7 @@ title: "AI a csevegésen túl: az üzleti szoftverek jövője"
 speaker: Miklós Koren (CEU)
 date: 2026-10-08
 code: missing
-image: https://koren.dev/assets/images/stock/computer-code-ieic5Tq8YMk-unsplash.jpg
+image: https://koren.dev/assets/images/stock/DSB08660.jpg
 description: "Closing keynote at the MLBKT Congress (Logistics Congress) — how AI changes the economics of business software, from cloud giants to bespoke solutions, and what it means for firms, competition, and human expertise."
 event_date: 2026-10-16
 location: "Toscana I–II. terem, Siófok, Hungary"
