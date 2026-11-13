@@ -12,5 +12,7 @@ categories:
     - panel
 tags:
     - macromanagers
-links: []
+links:
+    - text: "Video"
+      url: "https://youtu.be/NbHdj6TsoC8"
 ---
